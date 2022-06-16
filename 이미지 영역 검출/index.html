@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>선택 영역 형태 변환</title>
+    <style>
+        .image {
+            width: 24rem; /* 384 */
+            height: 18rem; /* 288 */
+        }
+        .idcard {
+            width: 43rem;
+            height: 27rem;
+        }
+        .btn {
+            width: 6rem;
+            height: 2rem;
+            background-color: skyblue;
+            border: 1px solid black;
+            cursor: pointer;
+            text-align: center;
+            line-height: 2rem;
+        }
+        .btn:hover {
+            background-color: rgb(99, 146, 164);
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <input type="file" id="fileInput" name="file" /><br/>
+        <img id="imageInput" class="image">
+        <canvas id="canvasInput" class="image" width="384" height="288"></canvas>
+        <div id='trans' class="btn" >click</div>
+    </div>
+    <div>
+        <canvas id="canvasOutput" class="idcard" width="688" height="432"></canvas>
+    </div>
+</body>
+<script src="./index.js"></script>
+<script async src="https://docs.opencv.org/3.4/opencv.js" onload="onOpenCvReady();" type="text/javascript"></script>
+</html>
